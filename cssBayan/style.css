@@ -1,0 +1,105 @@
+body {
+  background-color: rgba(247, 247, 248, 0.9);
+}
+
+p {
+  margin: 0;
+}
+
+.app-container {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+h1 {
+  color: rebeccapurple;
+}
+
+.meme {
+  width: 60%;
+  opacity: 0;
+  transition: opacity 5s ease-in-out;
+  margin: 0 auto;
+  /* margin-top: 10px; */
+}
+
+.card {
+  position: relative;
+}
+
+.card__header {
+  font-size: 20px;
+  user-select: none;
+  margin-bottom: 10px;
+}
+
+.card::after,
+.card::before {
+  content: " ";
+  position: relative;
+  display: block;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+}
+.card::before {
+  margin-bottom: 10px;
+}
+/* .card::after {
+    margin-top: 10px;
+  } */
+
+.check {
+  appearance: none;
+}
+
+.card__image {
+  opacity: 0;
+}
+
+.card__image:active {
+  opacity: 1;
+}
+
+.card__image-container::selection {
+  visibility: visible;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+}
+
+.meme {
+  width: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  padding-bottom: 10px;
+}
+
+/* mechanic */
+#el1:checked ~ #meme1 {
+  width: 60%;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  padding-bottom: 10px;
+}
+@media screen and (max-width: 500px) {
+  #el1:checked ~ #meme1 {
+    width: 80%;
+  }
+}
+#el1 {
+  color: blue;
+}
+
+#el1:checked {
+  color: black;
+}
