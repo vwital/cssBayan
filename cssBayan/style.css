@@ -84,6 +84,32 @@ h1 {
   padding-bottom: 10px;
 }
 
+.cross {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  float: right;
+}
+
+.cross::after,
+.cross::before {
+  display: inline-block;
+  content: "";
+  background-color: black;
+  width: 20px;
+  height: 2px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  transform: translateY(-50%);
+}
+.cross::before {
+  transform: rotate(45deg);
+}
+.cross::after {
+  transform: rotate(-45deg);
+}
+
 /* mechanic */
 #el1:checked ~ #meme1 {
   width: 60%;
@@ -97,6 +123,13 @@ h1 {
     width: 80%;
   }
 }
+#el1:checked ~ #cross1::after {
+  transform: rotate(90deg);
+}
+#el1:checked ~ #cross1::before {
+  transform: rotate(0deg);
+}
+
 #el1 {
   color: blue;
 }
