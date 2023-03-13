@@ -104,3 +104,55 @@ h1 {
 #el1:checked {
   color: black;
 }
+
+#el2:checked ~ #meme2 {
+  width: 60%;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  padding-bottom: 10px;
+}
+@media screen and (max-width: 500px) {
+  #el2:checked ~ #meme2 {
+    width: 80%;
+  }
+}
+
+#el3:checked ~ #meme3 {
+  width: 60%;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  padding-bottom: 10px;
+}
+@media screen and (max-width: 500px) {
+  #el3:checked ~ #meme3 {
+    width: 80%;
+  }
+}
+
+#el4:checked ~ #meme4 {
+  width: 60%;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  padding-bottom: 10px;
+}
+@media screen and (max-width: 500px) {
+  #el4:checked ~ #meme4 {
+    width: 80%;
+  }
+}
+
+#el5:checked ~ #meme5 {
+  width: 60%;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  padding-bottom: 10px;
+}
+@media screen and (max-width: 500px) {
+  #el5:checked ~ #meme5 {
+    width: 80%;
+  }
+}
