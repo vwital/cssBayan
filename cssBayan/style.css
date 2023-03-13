@@ -105,6 +105,14 @@ h1 {
   color: black;
 }
 
+#meme2 {
+  width: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  padding-bottom: 10px;
+}
+
 #el2:checked ~ #meme2 {
   width: 60%;
   visibility: visible;
